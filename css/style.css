@@ -66,7 +66,6 @@ header li:hover {
 }
 header
 /**sign up form**/
-#showcase {
-    min-height: 400px;
-    background:url('../img/cover.jpg')
+section .signup {
+	background: linear-gradient(#5cf9ee,teal);
 }
