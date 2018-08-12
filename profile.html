@@ -48,18 +48,15 @@
     <section id="main">
             <div class="container">
                 <article id="profile">
-                    <div class="myqns">
-                        <div id="title">
-                                <h3>My Questions</h3><img src="img/prof-page.jpg" style="border-radius: 50%;">
-                        </div>
-                        <div class="tab">
-                                <button class="tablinks" onclick="openCity(event, 'Recent')">Recent</button>
-                                <button class="tablinks" onclick="openCity(event, 'Most')">Most Answered</button>
-                        </div>
-                        <div class="qns">
-
-                        </div>
-                    </div>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTime(event, 'Most')">Most</button>
+                        <button class="tablinks" onclick="openTime(event, 'Recent')">Recent</button>
+                      </div>
+                      
+                      <div id="Most" class="tabcontent">
+                        <p><a href="#">London is the capital city of England.</a><span>56</span></p>
+                        
+                      </div>
                 </article>
                 <aside id="sidebar">
                         <h3>Stats</h3>
@@ -74,18 +71,18 @@
         <p>Capsule Web. Copyright &copy; 2018</p>
     </footer>
     <script>
-            function openCity(evt, cityName) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityName).style.display = "block";
-                evt.currentTarget.className += " active";
+        function openTime(evt, stat) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
-            </script>
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(stat).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        </script>
 </body>
