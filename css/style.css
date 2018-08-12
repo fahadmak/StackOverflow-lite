@@ -1,11 +1,72 @@
+/**global**/
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #f4f4f4;  
+    background-color: #f4f4f4;
+    line-height: 1.5;
+    font-size: 15px;
 }
 .container{
     width: 80%;
     margin:auto;
     overflow: hidden;
+}
+/**end of global**/
+/**header**/
+header{
+    background-color: cornflowerblue;
+    color: #ffff;
+    padding-top: 30px;
+    min-height: 50px;
+    border-bottom: 3px solid red
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+}
+header li{
+    float:left;
+    display: inline;
+    padding: 0 20px;
+}
+header #logo{
+    float: left;
+}
+header #logo h1{
+    margin: 0;
+}
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+.here {
+    padding: 12px -1px;
+    height: 24px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 13px;
+    padding-top: 3px;
+    font-weight: bold;
+}
+header li:hover {
+    background-color: red;
+    height: 24px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 13px;
+    padding-top: 3px;
+    font-weight: bold;
+}
+header
+/**sign up form**/
+#showcase {
+    min-height: 400px;
+    background:url('../img/cover.jpg')
 }
