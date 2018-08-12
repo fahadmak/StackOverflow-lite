@@ -146,11 +146,15 @@ article #profile{
 }
 /**footer**/
 footer {
-    padding: 20px;
+    
     margin-top: 20px;
     color: white;
     background-color: cornflowerblue;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
 }
 /** profile info**/
 
