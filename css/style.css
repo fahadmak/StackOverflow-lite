@@ -115,6 +115,24 @@ input#submit-button {
 .signup h1{
     font-size: 35px;
 }
+.info {
+    padding-left: 12px;
+}
+.desc {
+    display: flex;
+    padding: 31px 32px;
+}
+article #profile{
+    float: right;
+    width: 12px;
+}
+/** sidebar**/
+
+#sidebar{
+    float: right;
+    width: 20%;
+    margin-top: 10px;
+}
 /**footer**/
 footer {
     padding: 20px;
@@ -122,4 +140,17 @@ footer {
     color: white;
     background-color: cornflowerblue;
     text-align: center;
+}
+/** profile info**/
+
+.info {
+    padding-left: 12px;
+}
+.desc {
+    display: flex;
+    padding: 31px 32px;
+}
+#profile{
+    float: left;
+    width: 65%;
 }

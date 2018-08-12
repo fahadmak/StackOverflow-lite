@@ -23,22 +23,69 @@
        
     </header>
     <section id="main">
-        <div class="container" style="width: 77%;padding-top: 79px;">
+        <div class="container">
             <article id="profile">
-                <div id="prof-pic">
-                    <img src="">
+                <div class="desc">
+                    <div id="prof-pic">
+                            <img src="img/prof-page.jpg" style="border-radius: 50%;">
+                    </div>
+                    <div class="info">
+                        <h1>Join the Community</h1>
+                        <p>Grow your carreer to today, with the neatest
+                        and informative platform.<br>Own your Learning</p>
+                    </div>
                 </div>
-                <div class="welcome" style="float: right;">
-                    <h1>Join the Community</h1>
-                    <p>Grow your carreer to today, with the neatest
-                    and informative platform.<br>Own your Learning</p>
-                </div>
-            
             </article>
+            <aside id="sidebar">
+                    <h3>Stats</h3>
+                    <hr>
+                    <p>Answers <span>0</span></p>
+                    <p>Questions <span>0</span></p>
+            </aside>
         </div>
         
     </section>
+    <section id="main">
+            <div class="container">
+                <article id="profile">
+                    <div class="myqns">
+                        <div id="title">
+                                <h3>My Questions</h3><img src="img/prof-page.jpg" style="border-radius: 50%;">
+                        </div>
+                        <div class="tab">
+                                <button class="tablinks" onclick="openCity(event, 'Recent')">Recent</button>
+                                <button class="tablinks" onclick="openCity(event, 'Most')">Most Answered</button>
+                        </div>
+                        <div class="qns">
+
+                        </div>
+                    </div>
+                </article>
+                <aside id="sidebar">
+                        <h3>Stats</h3>
+                        <hr>
+                        <p>Answers <span>0</span></p>
+                        <p>Questions <span>0</span></p>
+                </aside>
+            </div>
+            
+        </section>
     <footer>
         <p>Capsule Web. Copyright &copy; 2018</p>
     </footer>
+    <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            </script>
 </body>
