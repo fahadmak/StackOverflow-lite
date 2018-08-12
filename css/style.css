@@ -1,16 +1,16 @@
 /**global**/
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Arial', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
     margin: 0;
     background-color: #f4f4f4;
     line-height: 1.5;
     font-size: 15px;
 }
-.container{
-    width: 80%;
-    margin:auto;
-    overflow: hidden;
+.container {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
 }
 /**end of global**/
 /**header**/
@@ -64,8 +64,54 @@ header li:hover {
     padding-top: 3px;
     font-weight: bold;
 }
-header
-/**sign up form**/
-section .signup {
-	background: linear-gradient(#5cf9ee,teal);
+
+.signup {
+    background: linear-gradient(#5cf9ee,teal);
+    min-height: 400px;
+    color: #ffffffff;
+    
+}
+.signup welcome {	
+    float: left;
+}
+
+.register {
+    float: right;
+}
+.login-fields input {
+    width: 276px;
+    line-height: 1.3;
+    font-size: 100%;
+    margin-bottom: 10px;
+    height: 39px;
+    cursor: auto !important;
+    padding: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(228, 230, 232);
+    border-image: initial;
+    border-radius: 0px;
+}
+label.holder {
+    font-weight: bold;
+}
+input#submit-button {
+    
+    width: 101px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    box-shadow: none;
+    text-shadow: none;
+    cursor: pointer;
+    margin-bottom: 0px !important;
+    background: rgb(0, 119, 204);
+    border-radius: 3px;
+    text-decoration: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.signup h1{
+    font-size: 35px;
 }
