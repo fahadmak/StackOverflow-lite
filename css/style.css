@@ -64,7 +64,7 @@ header li:hover {
     padding-top: 3px;
     font-weight: bold;
 }
-
+/**signup**/
 .signup {
     background: linear-gradient(#5cf9ee,teal);
     min-height: 400px;
@@ -114,4 +114,12 @@ input#submit-button {
 }
 .signup h1{
     font-size: 35px;
+}
+/**footer**/
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: cornflowerblue;
+    text-align: center;
 }
