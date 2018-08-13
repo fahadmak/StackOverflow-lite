@@ -18,7 +18,7 @@ header{
     background-color: cornflowerblue;
     color: #ffff;
     padding-top: 30px;
-    min-height: 50px;
+    min-height: 70px;
     border-bottom: 3px solid red
 }
 header a {
@@ -67,7 +67,7 @@ header li:hover {
 /**signup**/
 .signup {
     background: linear-gradient(#5cf9ee,teal);
-    min-height: 400px;
+    min-height: 509px;
     color: #ffffffff;
     
 }
