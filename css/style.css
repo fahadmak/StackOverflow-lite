@@ -235,7 +235,8 @@ textarea {
     header nav,
     header nav li,
     .signup form,
-    .signup h1, .sidebar, #profile, #sidebar,#qns{
+    .signup h1,
+    .signup p, .sidebar, #profile, #sidebar,#qns{
         float:none;
         text-align:center;
         width: 100%;
