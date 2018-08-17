@@ -21,7 +21,7 @@ class Question(object):
     def get_all_questions():
         return Question.questions
 
-question_1 = Question('Held up?')
+question_1 = Question('Who is who?')
 question_2 = Question('No man?')
 question_2 = Question('wtfd?')
 all_questions = Question.questions
