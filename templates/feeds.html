@@ -9,7 +9,7 @@
     <header>    
         <div class="container">
             <div id="logo">
-                <h2>StackOver Lite</h2>
+                <h2>Stack Over Lite</h2>
             </div>
             <nav>
                     <ul>
@@ -22,7 +22,7 @@
         </div>
        
     </header>
-    <section id="main">
+    <section id="post">
             <div class="container">
                 <article id="qns">
                     <div class="textbox">
@@ -30,18 +30,16 @@
                             <div class="feed-box">
                                 <label style="padding: 47px;color: black;font-style: italic;font-weight: bold;">What is Your question Please?</label>
                                 <br>
-                                <textarea id="qns" name="qns" rows="10" cols="35">
+                                <textarea id="qrs" name="qns" rows="10" cols="35">
                                 </textarea>
                             </div>
                             <div class="bun">
-                                <input value="Sign Up" type="button">
+                                <input value="Post" type="button">
                             </div>
                         </form>
                     </div>
                 </article>
-                <aside id="left-sidebar">
-                        
-                </aside>
+               
             </div>
             
         </section>
@@ -50,17 +48,35 @@
                     <article id="qns">
                         
                         <div class="tab">
-                            <button class="tablinks" onclick="openTime(event, 'Most')">Most</button>
                             <button class="tablinks" onclick="openTime(event, 'Recent')">Recent</button>
+                            <button class="tablinks" onclick="openTime(event, 'Questions')">Questions and Answers</button>
                           </div>
                           
-                          <div id="Most" class="tabcontent">
+                          <div id="Recent" class="tabcontent">
                             <p><a href="#">Symfony 4 event listener not registering</a><span class="number">56</span></p>
                             
                           </div>
-                          <div id="Recent" class="tabcontent">
-                            <p><a href="#">How to use Laravel Blade in JS (PHP)</a><span class="number">56</span></p>
-                            
+                          <div id="Questions" class="tabcontent">
+                              
+                                <p><a href="#">What are the seven data types?</a><span class="number">56</span></p>
+                                
+                                <ul>
+                                <li>number for both floating-point and integer numbers</li>
+                                <br>
+                                <li>String for strings,</li>
+                                <br>
+                                <li>boolean for logical values: true/false,</li>
+                                <br>
+                                <li>null – a type with a single value null, meaning “empty” or “does not exist”,
+                                    undefined – a type with a single value </li>
+                                <br>
+                                <li>object and symbol – for complex data structures and unique identifiers, we haven’t learnt them yet.</li>
+                                <br>
+                                <li>null – a type with a single value null, meaning “empty” or “does not exist”,
+                                    undefined – a type with a single value </li>
+                                <br>
+                                <li>number for both floating-point and integer numbers</li>
+                            </ul>
                           </div>
                     </article>
                     <aside id="left-sidebar ads">
