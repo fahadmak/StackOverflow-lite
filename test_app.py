@@ -9,10 +9,7 @@ class QuestionTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
-        self.question1 = Question('what is osmosis?')
-        self.question2 = Question('What is SSt?')
-
-            
+                    
     def test_get_all_questions(self):
         res = self.app.get('/api/v1/questions')
         self.assertEqual(res.status_code, 200)
