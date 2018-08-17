@@ -21,9 +21,14 @@ class Question(object):
     def get_all_questions():
         return Question.questions
 
+question_1 = Question('Held up?')
+question_2 = Question('No man?')
+question_2 = Question('wtfd?')
+all_questions = Question.questions
+
 @app.route('/api/v1.0/items', methods=['GET'])
 def get_all_questions():
-    return jsonify({'questions' : Question.questions})
+    return jsonify({'questions' : all_questions})
 
 if __name__ == '__main__':
     app.run(debug=True)

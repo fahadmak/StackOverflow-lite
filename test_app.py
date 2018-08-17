@@ -9,8 +9,6 @@ class QuestionTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
-        self.question_1 = Question('Held up?')
-        self.question_2 = Question('Held up?')
     
     def test_get_all_questions(self):
         res = self.app.get('/api/v1.0/items')
