@@ -12,10 +12,6 @@ class Question(object):
 
     def __init__(self):
         self.question = {}
-        self.question['name'] = ''
-        Question.ques_id += 1
-        self.question['id'] = Question.ques_id
-        Question.questions.append(self.question)
 
     @staticmethod
     def _get_all_questions():
@@ -24,18 +20,28 @@ class Question(object):
     @staticmethod
     def _get_question_byId(ques_id):
         return [question for question in Question.questions if question['id'] == ques_id]
+    
+    
+    def _add_question(self,name):
+        Question.ques_id += 1
+        self.question['id'] = Question.ques_id
+        self.question['name'] = name
+        Question.questions.append(self.question)
 
-question1 = Question()
-question2 = Question()
 
 @app.route('/api/v1/questions', methods=['GET'])
 def get_all_questions():
+    Question._get_all_questions()
     return jsonify({'questions' : Question.questions})
 
 @app.route('/api/v2/questions/<int:questionId>', methods=['GET'])
 def get_question_byId(questionId):
     questionw = Question._get_question_byId(questionId)
     return jsonify({'question': questionw})
+
+@app.route('/api/v3/questions', methods=['POST'])
+def add_question():
+    return jsonify({'questions' : Question.questions}), 201
 
 if __name__ == '__main__':
     app.run(debug=True)
