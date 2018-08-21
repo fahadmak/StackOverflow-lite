@@ -1,2 +1,2 @@
 # StackOverflow-lite
-the project u gg l link is https://fahadmak.github.io/StackOverflow-lite/
+the project url link is https://fahadmak.github.io/StackOverflow-lite/

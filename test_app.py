@@ -1,4 +1,5 @@
-from app import app, Question
+from app.views import app
+from flask import Flask
 
 import unittest
 
@@ -9,31 +10,35 @@ class QuestionTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
-                    
+        self.question = {"qn_id": 3, "title" : "kkjddhdbdjddj", "body" : "njaahkhj kjkjhkjda a"}
+        self.answer ={"qn_id": 3, "an_id" : 4, "descr" : "djddfasfsakfshsfkjfshsfkhf"}
+                
     def test_get_all_questions(self):
-        res = self.app.get('/api/v1/questions')
-        self.assertEqual(res.status_code, 200)
-        data = json.loads(res.get_data(as_text=True))
-        self.assertEqual(len(data['questions']), 1)
-
+        """Test StackOver FlowLite API can get all (GET request)."""
+        response = self.app.get('/api/v1/questions')
+        data = json.loads(response.get_data())
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(data['questions']), 2)
+    
     def test_get_question_byId(self):
-        res = self.app.get('/api/v2/questions/1')
-        self.assertEqual(res.status_code, 200)
-        data = json.loads(res.get_data(as_text=True))
-        self.assertEqual(data['question'][0]['id'], 1)
-
+        """Test API can fetch a question by using it's id."""
+        response = self.app.get('/api/v1/questions/1')
+        data = json.loads(response.get_data())
+        self.assertEqual(response.status_code, 200)
+    
     def test_add_question(self):
-        result = {'name' : 'reality'}
-        res = self.app.post('/api/v3/questions', data=result)
-        self.assertEqual(res.status_code, 201)
+        """Test API can create a single question."""
+        response = self.app.post('/api/v1/questions',
+                                 data=json.dumps(self.question),
+                                 content_type='application/json')
+        self.assertEqual(response.status_code, 201)
 
     def test_add_answer(self):
-        question2 = Question()
-        question2._add_question('neuro science')
-        result = question2._get_question_byId(1)
-        pd = result[0]
-        res = self.app.post('/api/v4/questions/1', data=pd)
-        self.assertEqual(res.status_code, 201)
+        """Test API can create a single answer."""
+        response = self.app.post('/api/v1/questions/1/answers',
+                                 data=json.dumps(self.answer),
+                                 content_type='application/json')
+        self.assertEqual(response.status_code, 201)
 
 if __name__ == '__main__':
     unittest.main()
