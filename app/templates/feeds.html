@@ -3,7 +3,7 @@
     <title>Stack OverFlow</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <header>    
@@ -22,34 +22,38 @@
         </div>
        
     </header>
-    <section id="post">
-            <div class="container">
-                <article id="qns">
-                    <div class="textbox">
-                        <form>
-                            <div class="feed-box">
-                                <label style="padding: 47px;color: black;font-style: italic;font-weight: bold;">What is Your question Please?</label>
-                                <br>
-                                <textarea id="qrs" name="qns" rows="10" cols="35">
-                                </textarea>
+    <section id="main" class="feeder" style="height: 215px;">
+            <div class="container feeder">
+                <article id="crush" style="float: left;width: 65%;height: 94%;">
+                        <div class="textbox">
+                                <form class="textarea" style="height: 70%;">
+                                    <label style="color: #2870f5;font-weight: bold;font-size: 17px;">What is Your question Please?</label>
+                                        <br>
+                                    <div class="feed-box">
+                                        <textarea id="question"></textarea>
+                                    </div>
+                                    <div class="bun">
+                                        <input value="Post" style="height: 40px;width: 93px;color: white;background-color: cornflowerblue;border-style: none;border-radius: 4px;" type="button">
+                                    </div>
+                                </form>
                             </div>
-                            <div class="bun">
-                                <input value="Post" type="button">
-                            </div>
-                        </form>
-                    </div>
                 </article>
-               
+                <aside id="sidebar">
+                        <h3>Stat</h3>
+                        <hr>
+                        <p>Answers <span>0</span></p>
+                        <p>Questions <span>0</span></p>
+                </aside>
             </div>
             
-        </section>
+    </section>
         <section id="main">
                 <div class="container">
                     <article id="qns">
                         
                         <div class="tab">
-                            <button class="tablinks" onclick="openTime(event, 'Recent')">Recent</button>
-                            <button class="tablinks" onclick="openTime(event, 'Questions')">Questions and Answers</button>
+                            <button class="tablinks" onclick="openTime(event, 'Recent')" id="defaultOpen">Recently Asked Questions</button>
+                            <button class="tablinks" onclick="openTime(event, 'Questions')">Question with all the Answers</button>
                           </div>
                           
                           <div id="Recent" class="tabcontent">
@@ -102,5 +106,6 @@
             document.getElementById(stat).style.display = "block";
             evt.currentTarget.className += " active";
         }
+        document.getElementById("defaultOpen").click()
         </script>
 </body>
