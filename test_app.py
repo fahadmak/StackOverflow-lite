@@ -28,17 +28,17 @@ class QuestionTestCase(unittest.TestCase):
     
     def test_add_question(self):
         """Test API can create a single question."""
-        response = self.app.post('/api/v1/questions',
+        question = self.app.post('/api/v1/questions',
                                  data=json.dumps(self.question),
                                  content_type='application/json')
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(question.status_code, 201)
 
     def test_add_answer(self):
         """Test API can create a single answer."""
-        response = self.app.post('/api/v1/questions/1/answers',
+        answer = self.app.post('/api/v1/questions/1/answers',
                                  data=json.dumps(self.answer),
                                  content_type='application/json')
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(answer.status_code, 201)
 
 if __name__ == '__main__':
     unittest.main()

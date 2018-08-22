@@ -15,10 +15,7 @@ def get_question_byID(questionid):
 
 @app.route('/api/v1/questions', methods=['POST'])
 def add_questions():
-    if len(questions) == 0:
-        questionid = 1
-    else:
-        questionid = len(questions) + 1
+    questionid = len(questions) + 1
     data = request.get_json()
     title = data['title']
     body = data['body']
@@ -27,10 +24,7 @@ def add_questions():
 
 @app.route('/api/v1/questions/<questionid>/answers', methods=['POST'])
 def add_answer(questionid):
-    if len(answers) == 0:
-        an_id = 1
-    else:
-        an_id = len(answers) + 1
+    an_id = len(answers) + 1
     data = request.get_json()
     descr = data['descr']
     qn_id = questionid
