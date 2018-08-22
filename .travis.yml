@@ -9,11 +9,10 @@ cache: pip
 before_script:
   - easy_install distribute
   - pip install -r requirements.txt
-  - pip install pytest pytest-cov
-  - pip install coveralls
 
 script:
-    - pytest
+    - py.test
+    - coverage run --source app test
 
 after_success:
   - coveralls
