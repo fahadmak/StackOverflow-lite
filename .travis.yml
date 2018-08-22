@@ -1,20 +1,11 @@
 language: python
-
 python:
-    - 3.6
-
-cache: pip
-
-# install dependencies
-before_script:
-  - easy_install distribute
-  - pip install -r requirements.txt
-  - pip install pytest pytest-cov
+  - "3.6"
+install:
+  - pip install pytest
+  - pip install pytest-cov
   - pip install coveralls
-
 script:
-    - py.test
-
+  - pytest --cov=app/
 after_success:
   - coveralls
-
