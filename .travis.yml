@@ -12,8 +12,8 @@ before_script:
 
 script:
     - py.test
-    - coverage run --source app __init__.py test
-
+    - coverage report -m 
+    
 after_success:
   - coveralls
 
