@@ -28,9 +28,7 @@ class QuestionTestCase(unittest.TestCase):
     
     def test_add_question(self):
         """Test API can create a single question."""
-        question = self.app.post('/api/v1/questions',
-                                 data=json.dumps(self.question),
-                                 content_type='application/json')
+        question = self.app.post('/api/v1/questions', data=json.dumps(self.question), content_type='application/json')
         self.assertEqual(question.status_code, 201)
 
     def test_add_answer(self):
