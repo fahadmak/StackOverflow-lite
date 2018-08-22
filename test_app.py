@@ -37,7 +37,3 @@ class QuestionTestCase(unittest.TestCase):
     def test_add_answer(self):
         """Test API can create a single answer."""
         self.post_info('/api/v1/questions/1/answers', self.answer)
-
-if __name__ == '__main__':
-    unittest.main()
-    
