@@ -12,7 +12,11 @@ class QuestionTestCase(unittest.TestCase):
         self.app.testing = True
         self.question = {"qn_id": 3, "title" : "kkjddhdbdjddj", "body" : "njaahkhj kjkjhkjda a"}
         self.answer ={"qn_id": 3, "an_id" : 4, "descr" : "djddfasfsakfshsfkjfshsfkhf"}
-                
+
+    def post_info(self, link, data):
+        response = self.app.post(link, data=json.dumps(data), content_type='application/json')
+        self.assertEqual(response.status_code, 201)
+
     def test_get_all_questions(self):
         """Test StackOver FlowLite API can get all (GET request)."""
         response = self.app.get('/api/v1/questions')
@@ -28,15 +32,11 @@ class QuestionTestCase(unittest.TestCase):
     
     def test_add_question(self):
         """Test API can create a single question."""
-        question = self.app.post('/api/v1/questions', data=json.dumps(self.question), content_type='application/json')
-        self.assertEqual(question.status_code, 201)
+        self.post_info('/api/v1/questions', self.question)
 
     def test_add_answer(self):
         """Test API can create a single answer."""
-        answer = self.app.post('/api/v1/questions/1/answers',
-                                 data=json.dumps(self.answer),
-                                 content_type='application/json')
-        self.assertEqual(answer.status_code, 201)
+        self.post_info('/api/v1/questions/1/answers', self.answer)
 
 if __name__ == '__main__':
     unittest.main()
