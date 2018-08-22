@@ -29,12 +29,12 @@ class Question(object):
             
     @classmethod
     def get_all(cls):
-        qns =[]
+        quns =[]
         for question in questions:
             quest = question.to_json()            
-            qns.append(quest)
-            print(qns)
-        return qns
+            quns.append(quest)
+            print(quns)
+        return quns
 
 class Answer(object):
 
