@@ -22,7 +22,7 @@ class QuestionTestCase(unittest.TestCase):
         response = self.app.get('/api/v1/questions')
         data = json.loads(response.get_data())
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(data['questions']), 2)
+        self.assertEqual(len(data['questions']), 1)
     
     def test_get_question_byId(self):
         """Test API can fetch a question by using it's id."""
