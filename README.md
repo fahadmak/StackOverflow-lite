@@ -5,6 +5,7 @@
 StackOverflow-lite is a platform where people can ask questions and provide answers.
 
 The project url link is http://fahadmak.github.io/StackOverflow-lite/
+
 The heroku url link is https://fahad-stack-lite-api.herokuapp.com/api/v1
 ## API endpoints
 
