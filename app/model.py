@@ -28,7 +28,7 @@ class Question(object):
         return qid
             
     @classmethod
-    def get_all(cls):
+    def get_all_questions(cls):
         quns =[]
         for question in questions:
             quest = question.to_json()            
@@ -55,5 +55,11 @@ class Answer(object):
         data = {'qn_id' : self.qn_id, 'an_id' : self.an_id, 'descr' : self.descr}
         return data
 
-
+    @classmethod
+    def get_all_answers(cls):
+        ans =[]
+        for answer in answers:
+            answ = answer.to_json()            
+            ans.append(answ)
+        return ans
         

@@ -1,4 +1,5 @@
 from app.views import app
+
 from flask import Flask
 
 import unittest
@@ -10,8 +11,8 @@ class QuestionTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
         self.app.testing = True
-        self.question = {"qn_id": 3, "title" : "kkjddhdbdjddj", "body" : "njaahkhj kjkjhkjda a"}
-        self.answer ={"qn_id": 3, "an_id" : 4, "descr" : "djddfasfsakfshsfkjfshsfkhf"}
+        self.question = {"qn_id": 1, "title" : "kkjddhdbdjddj", "body" : "njaahkhj kjkjhkjda a"}
+        self.answer ={"qn_id": 1, "an_id" : 1, "descr" : "djddfasfsakfshsfkjfshsfkhf"}
 
     def post_info(self, link, data):
         response = self.app.post(link, data=json.dumps(data), content_type='application/json')
@@ -22,7 +23,7 @@ class QuestionTestCase(unittest.TestCase):
         response = self.app.get('/api/v1/questions')
         data = json.loads(response.get_data())
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(len(data['questions']), 2)
+        self.assertEqual(len(data['questions']), 1)
     
     def test_get_question_byId(self):
         """Test API can fetch a question by using it's id."""
