@@ -7,7 +7,7 @@ StackOverflow is a platform where you ask questions in a particular field of inf
 - Post Questions
 - Get a specific Question
 - Post an answer to a question
-# Features
+# Prerequisites
 - Python version 3.6.5
 - Vitual Environment
 - Postman to Check if endpoints work
