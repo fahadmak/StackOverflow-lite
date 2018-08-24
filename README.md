@@ -5,7 +5,7 @@
 StackOverflow-lite is a platform where people can ask questions and provide answers.
 
 the project url link is http://fahadmak.github.io/StackOverflow-lite/
-
+## API endpoints
 
 | EndPoint      | Functionality |
 | ------------- | ------------- |
