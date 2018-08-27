@@ -10,4 +10,6 @@ class DatabaseConnection:
             self.cursor = self.connect.cursor()
         except:
             pprint("Cannot connect to database")
-    
+
+if __name__== '__main__':
+    database_connection = DatabaseConnection()
